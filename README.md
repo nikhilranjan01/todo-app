@@ -47,43 +47,43 @@ Built as part of a **Technical Assessment – Full Stack Developer**.
 ---
 
 ## 📁 Project Structure
-
+```
 todo-app/
-│
 ├── backend/
-│ ├── models/
-│ │ ├── User.js
-│ │ ├── Board.js
-│ │ └── Todo.js
-│ ├── routes/
-│ │ ├── authRoutes.js
-│ │ ├── boardRoutes.js
-│ │ └── todoRoutes.js
-│ ├── middleware/
-│ │ └── authMiddleware.js
-│ ├── server.js
-│ └── .env
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Board.js
+│   │   └── Todo.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── boardRoutes.js
+│   │   └── todoRoutes.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   ├── server.js
+│   └── .env
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── api/
-│ │ │ └── axios.js
-│ │ ├── components/
-│ │ │ ├── Login.jsx
-│ │ │ ├── Register.jsx
-│ │ │ ├── BoardList.jsx
-│ │ │ └── TodoList.jsx
-│ │ ├── pages/
-│ │ │ └── Dashboard.jsx
-│ │ ├── App.jsx
-│ │ ├── main.jsx
-│ │ └── index.css
-│ ├── tailwind.config.js
-│ ├── postcss.config.js
-│ └── package.json
+│   ├── src/
+│   │   ├── api/
+│   │   │   └── axios.js
+│   │   ├── components/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── BoardList.jsx
+│   │   │   └── TodoList.jsx
+│   │   ├── pages/
+│   │   │   └── Dashboard.jsx
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   └── package.json
 │
 └── README.md
 
+```
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone Repository
