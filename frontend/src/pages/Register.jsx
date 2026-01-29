@@ -6,17 +6,17 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const register = async (e) => {
+  const submit = async (e) => {
     e.preventDefault();
     const res = await createUserWithEmailAndPassword(auth, email, password);
     await sendEmailVerification(res.user);
-    alert("Verification email sent");
+    alert("Verify your email");
   };
 
   return (
-    <form onSubmit={register}>
-      <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+    <form onSubmit={submit}>
+      <input placeholder="Email" onChange={e => setEmail(e.target.value)} />
+      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
       <button>Register</button>
     </form>
   );
