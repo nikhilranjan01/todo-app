@@ -1,16 +1,116 @@
-# React + Vite
+# 🗂️ Full Stack To-Do Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack task management (To-Do) web application where users can create boards and manage tasks within them.  
+Built as part of a **Technical Assessment – Full Stack Developer**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 🔐 Authentication
+- User registration & login using email and password
+- JWT-based authentication
+- Protected routes (boards & todos accessible only after login)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📋 Boards
+- Create boards
+- View all boards
+- Delete boards
 
-## Expanding the ESLint configuration
+### ✅ Todos
+- Create todos inside boards
+- View todos by board
+- Delete todos
+- Each todo shows **date & time of creation**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎨 UI / UX
+- Clean admin/SaaS-style UI
+- Responsive layout
+- Built using Tailwind CSS
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+- React.js (Vite)
+- Tailwind CSS
+- Axios
+- React Router DOM
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT Authentication
+
+---
+
+## 📁 Project Structure
+
+todo-app/
+│
+├── backend/
+│ ├── models/
+│ │ ├── User.js
+│ │ ├── Board.js
+│ │ └── Todo.js
+│ ├── routes/
+│ │ ├── authRoutes.js
+│ │ ├── boardRoutes.js
+│ │ └── todoRoutes.js
+│ ├── middleware/
+│ │ └── authMiddleware.js
+│ ├── server.js
+│ └── .env
+│
+├── frontend/
+│ ├── src/
+│ │ ├── api/
+│ │ │ └── axios.js
+│ │ ├── components/
+│ │ │ ├── Login.jsx
+│ │ │ ├── Register.jsx
+│ │ │ ├── BoardList.jsx
+│ │ │ └── TodoList.jsx
+│ │ ├── pages/
+│ │ │ └── Dashboard.jsx
+│ │ ├── App.jsx
+│ │ ├── main.jsx
+│ │ └── index.css
+│ ├── tailwind.config.js
+│ ├── postcss.config.js
+│ └── package.json
+│
+└── README.md
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone Repository
+```bash
+git clone <repository-url>
+cd todo-app
+
+2️⃣ Backend Setup
+cd backend
+npm install
+
+Create .env file in backend/:
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+
+Run backend:
+npm run dev
+
+Backend runs at:
+http://localhost:5000
+
+
+3️⃣ Frontend Setup
+cd frontend
+npm install
+npm run dev
+
+Frontend runs at:
+http://localhost:5173
